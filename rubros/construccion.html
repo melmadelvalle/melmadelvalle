@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construcción Residencial, Comercial y Obra Pública | Melma del Valle</title>
+  <meta name="description" content="Especialistas en construcción residencial de lujo, naves comerciales y obra pública en CDMX. Constructora Melma del Valle, calidad y rigor técnico.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Reutilizamos los estilos globales -->
+  <link rel="stylesheet" href="../styles.css">
+  
+  <!-- Estilos específicos para esta página interior -->
+  <style>
+    .inner-hero {
+      background: linear-gradient(135deg, rgba(16, 20, 46, 0.95) 0%, rgba(69, 76, 142, 0.9) 100%),
+                  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: #ffffff;
+      padding: 6rem 0 4rem;
+      text-align: center;
+    }
+    .inner-hero .section-title {
+      color: #ffffff;
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+    .inner-hero p {
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .subrubro-block {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .subrubro-block:nth-child(even) {
+      background-color: var(--color-bg-light);
+    }
+    .subrubro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .subrubro-image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 400px;
+    }
+    .subrubro-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .subrubro-content h2 {
+      font-size: 2rem;
+      color: var(--color-primary-dark);
+      margin-bottom: 1.5rem;
+    }
+    .subrubro-content p {
+      color: var(--color-text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+    .subrubro-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    .subrubro-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+    .subrubro-features li::before {
+      content: '✓';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-accent-soft);
+      color: var(--color-accent);
+      border-radius: 50%;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 992px) {
+      .subrubro-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .subrubro-image {
+        height: 300px;
+      }
+      .subrubro-block:nth-child(even) .subrubro-grid {
+        direction: ltr; /* Resetea el orden en móvil */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (Ajustado para ruta relativa) -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">
+        <img src="../logo.png?v=3" alt="Constructora Melma del Valle" class="brand-logo-img">
+      </a>
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Inicio</a></li>
+          <li><a href="../index.html#nosotros" class="nav-link">Quiénes Somos</a></li>
+          <li><a href="../index.html#rubros" class="nav-link active">Rubros</a></li>
+          <li><a href="../index.html#proceso" class="nav-link">Metodología</a></li>
+          <li><a href="../index.html#cotizador" class="nav-link">Cotizador</a></li>
+          <li><a href="../index.html#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="../index.html#cotizador" class="btn btn-primary nav-cta">Cotizar Proyecto</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO INTERIOR -->
+    <section class="inner-hero">
+      <div class="container">
+        <span class="section-tag light" style="margin-bottom: 1rem;">Especialidad 01</span>
+        <h1 class="section-title">Construcción Integral</h1>
+        <p>Desarrollamos proyectos de edificación desde la cimentación hasta la entrega final, garantizando solidez estructural y cumplimiento normativo.</p>
+      </div>
+    </section>
+
+    <!-- SUBRUBRO: RESIDENCIAL -->
+    <section class="subrubro-block" id="residencial">
+      <div class="container subrubro-grid">
+        <div class="subrubro-content">
+          <h2>Construcción Residencial</h2>
+          <p>Construimos hogares que combinan diseño arquitectónico, funcionalidad y durabilidad. Nos especializamos en viviendas unifamiliares, residencias de lujo y desarrollos de departamentos a medida.</p>
+          <ul class="subrubro-features">
+            <li>Casas y residencias personalizadas</li>
+            <li>Edificios de departamentos y condominios</li>
+            <li>Estructuras de concreto y acero certificadas</li>
+            <li>Supervisión técnica en cada etapa de la obra</li>
+          </ul>
+          <a href="../index.html#cotizador" class="btn btn-primary">Cotizar Construcción Residencial</a>
+        </div>
+        <div class="subrubro-image">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Construcción Residencial de lujo">
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBRUBRO: COMERCIAL -->
+    <section class="subrubro-block" id="comercial">
+      <div class="container subrubro-grid">
+        <!-- En pantallas grandes, invertimos el orden visual para que la imagen quede a la izquierda -->
+        <div class="subrubro-image">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Edificios comerciales y corporativos">
+        </div>
+        <div class="subrubro-content">
+          <h2>Construcción Comercial</h2>
+          <p>Desarrollamos espacios funcionales para empresas, locales y corporativos. Entendemos las necesidades del sector comercial y construimos naves industriales, plazas y oficinas optimizando tiempos y presupuestos.</p>
+          <ul class="subrubro-features">
+            <li>Locales comerciales y plazas</li>
+            <li>Bodegas y naves industriales</li>
+            <li>Oficinas corporativas (llave en mano)</li>
+            <li>Adaptación a normativas de seguridad comercial</li>
+          </ul>
+          <a href="../index.html#cotizador" class="btn btn-primary">Cotizar Construcción Comercial</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBRUBRO: OBRA PÚBLICA -->
+    <section class="subrubro-block" id="obra-publica">
+      <div class="container subrubro-grid">
+        <div class="subrubro-content">
+          <h2>Obra Pública e Infraestructura</h2>
+          <p>Colaboramos en el desarrollo de infraestructura urbana y mantenimiento institucional. Cumplimos estrictamente con los lineamientos técnicos, presupuestales y legales requeridos para proyectos gubernamentales y civiles.</p>
+          <ul class="subrubro-features">
+            <li>Infraestructura urbana (pavimentación, drenaje)</li>
+            <li>Mantenimiento de instalaciones institucionales</li>
+            <li>Obras civiles y espacios públicos</li>
+            <li>Cumplimiento de licitaciones y normativas</li>
+          </ul>
+          <a href="../index.html#cotizador" class="btn btn-primary">Cotizar Obra Pública</a>
+        </div>
+        <div class="subrubro-image">
+          <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f6?auto=format&fit=crop&w=800&q=80" alt="Obra pública e infraestructura civil">
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section cotizador-section" style="padding: 4rem 0;">
+      <div class="container text-center">
+        <h2 class="section-title text-white">¿Listo para iniciar tu proyecto de construcción?</h2>
+        <p class="text-white-80" style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Solicita una cotización formal y asesoría técnica. Nuestro equipo está listo para revisar tu terreno y planos.</p>
+        <a href="../index.html#cotizador" class="btn btn-primary btn-lg">Ir al Cotizador en Línea</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER SIMPLIFICADO -->
+  <footer class="footer">
+    <div class="container footer-bottom-flex">
+      <p>&copy; 2026 CONSTRUCTORA MELMA DEL VALLE, S.A. DE C.V.</p>
+      <div class="footer-legal-links">
+        <a href="../index.html">Volver al Inicio</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
