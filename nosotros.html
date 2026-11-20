@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Filosofía y Equipo | Constructora Melma del Valle</title>
+  <meta name="description" content="Conoce la Misión, Visión y Valores de Constructora Melma del Valle. Somos una empresa mexicana comprometida con la excelencia, la ética y la innovación.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Estilos específicos para esta página -->
+  <style>
+    .inner-hero {
+      background: linear-gradient(135deg, rgba(16, 20, 46, 0.95) 0%, rgba(69, 76, 142, 0.9) 100%),
+                  url('https://images.unsplash.com/photo-1541888946425-d0fbb186c5f6?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: #ffffff;
+      padding: 6rem 0 4rem;
+      text-align: center;
+    }
+    .inner-hero .section-title { color: #ffffff; font-size: clamp(2rem, 4vw, 3rem); }
+    .inner-hero p { color: rgba(255, 255, 255, 0.85); max-width: 700px; margin: 0 auto; }
+
+    /* Sección Misión y Visión */
+    .mv-section { background-color: var(--color-bg-light); padding: 5.5rem 0 3rem; }
+    .mv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+    }
+    .mv-card {
+      background-color: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+    .mv-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+      background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+    }
+    .mv-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .mv-icon {
+      width: 65px; height: 65px;
+      background-color: var(--color-accent-soft);
+      color: var(--color-primary);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .mv-icon svg { width: 32px; height: 32px; }
+    .mv-card h3 { font-size: 1.6rem; color: var(--color-primary-dark); margin-bottom: 1rem; }
+    .mv-card p { font-size: 1rem; color: var(--color-text-muted); line-height: 1.7; }
+
+    /* Sección Valores */
+    .valores-section { background-color: #ffffff; padding: 3rem 0 6rem; }
+    
+    /* Flexbox para centrar la última fila de tarjetas */
+    .valores-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; 
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    
+    .valor-card {
+      background-color: var(--color-bg-light);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      transition: var(--transition-normal);
+      border-left: 4px solid transparent;
+      
+      /* Forzamos 3 columnas en escritorio */
+      width: 100%;
+      max-width: calc(33.333% - 1rem); 
+    }
+    
+    .valor-card:hover {
+      border-left-color: var(--color-accent);
+      box-shadow: var(--shadow-md);
+      background-color: #ffffff;
+    }
+    
+    .valor-card h4 {
+      font-size: 1.15rem;
+      color: var(--color-primary-dark);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .valor-card h4 span {
+      color: var(--color-accent);
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+    .valor-card p {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    .team-cta { background-color: var(--color-bg-light); padding: 4rem 0; text-align: center; border-top: 1px solid var(--color-border); }
+
+    /* Responsive para móviles y tablets */
+    @media (max-width: 992px) {
+      .valor-card {
+        max-width: calc(50% - 1rem); /* 2 columnas en tablets */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mv-grid { grid-template-columns: 1fr; }
+      .mv-card { padding: 2rem 1.5rem; }
+      
+      .valor-card {
+        max-width: 100%; /* 1 columna en celular */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png?v=3" alt="Constructora Melma del Valle" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="nosotros.html" class="nav-link active">Quiénes Somos</a></li>
+          <li><a href="index.html#rubros" class="nav-link">Rubros y Especialidades</a></li>
+          <li><a href="index.html#proceso" class="nav-link">Metodología</a></li>
+          <li><a href="index.html#cotizador" class="nav-link">Cotizador</a></li>
+          <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#cotizador" class="btn btn-primary nav-cta">Cotizar Proyecto</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="inner-hero">
+      <div class="container">
+        <span class="section-tag light" style="margin-bottom: 1rem;">Nuestra Identidad</span>
+        <h1 class="section-title">Construimos con Propósito</h1>
+        <p>Más que edificar estructuras, creamos espacios que mejoran la vida de las personas. Conoce la filosofía que nos impulsa a dar lo mejor en cada proyecto.</p>
+      </div>
+    </section>
+
+    <!-- MISIÓN Y VISIÓN -->
+    <section class="mv-section">
+      <div class="container">
+        <div class="section-header text-center" style="margin-bottom: 1rem;">
+          <span class="section-tag">Hacia Dónde Vamos</span>
+          <h2 class="section-title">Misión y Visión</h2>
+        </div>
+
+        <div class="mv-grid">
+          <!-- Misión -->
+          <div class="mv-card">
+            <div class="mv-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+            </div>
+            <h3>Nuestra Misión</h3>
+            <p>En <strong>MELMA</strong> brindamos soluciones integrales a través de servicios especializados en arquitectura, ingeniería y mantenimiento, enfocándonos en la calidad, la eficiencia y la innovación. Nuestro compromiso es desarrollar proyectos funcionales y sostenibles que aporten valor a nuestros clientes, optimizando recursos y garantizando resultados confiables en cada etapa del proceso.</p>
+          </div>
+
+          <!-- Visión -->
+          <div class="mv-card">
+            <div class="mv-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </div>
+            <h3>Nuestra Visión</h3>
+            <p>Ser una empresa líder y referente en soluciones integrales a nivel nacional, reconocida por su excelencia técnica, profesionalismo y capacidad de adaptación a las necesidades de cada proyecto. En <strong>MELMA</strong> buscamos consolidarnos como un aliado estratégico que transforme ideas en espacios y soluciones duraderas, impulsando el crecimiento de nuestros clientes y el desarrollo de las comunidades donde operamos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALORES -->
+    <section class="valores-section">
+      <div class="container">
+        <div class="section-header text-center" style="margin-bottom: 1rem;">
+          <span class="section-tag">Nuestro ADN</span>
+          <h2 class="section-title">Nuestros Valores</h2>
+          <p class="section-subtitle">Los principios que rigen cada una de nuestras acciones y relaciones comerciales.</p>
+        </div>
+
+        <div class="valores-grid">
+          <!-- Calidad -->
+          <div class="valor-card">
+            <h4><span>01.</span> Calidad</h4>
+            <p>Nos comprometemos a entregar resultados que cumplan con los más altos estándares técnicos y operativos en cada servicio que ofrecemos.</p>
+          </div>
+
+          <!-- Compromiso -->
+          <div class="valor-card">
+            <h4><span>02.</span> Compromiso</h4>
+            <p>Trabajamos de la mano con nuestros clientes, cumpliendo tiempos, alcances y objetivos con responsabilidad y dedicación.</p>
+          </div>
+
+          <!-- Innovación -->
+          <div class="valor-card">
+            <h4><span>03.</span> Innovación</h4>
+            <p>Aplicamos soluciones creativas y tecnológicas que optimizan procesos, mejoran el desempeño de los proyectos y generan valor agregado.</p>
+          </div>
+
+          <!-- Trabajo en equipo -->
+          <div class="valor-card">
+            <h4><span>04.</span> Trabajo en equipo</h4>
+            <p>Fomentamos la colaboración entre especialistas para ofrecer soluciones integrales, eficientes y bien coordinadas.</p>
+          </div>
+
+          <!-- Ética y transparencia -->
+          <div class="valor-card">
+            <h4><span>05.</span> Ética y transparencia</h4>
+            <p>Actuamos con honestidad, claridad y respeto en cada relación profesional y comercial.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="team-cta">
+      <div class="container">
+        <h2 class="section-title">¿Listo para trabajar con nosotros?</h2>
+        <p class="text-muted" style="max-width: 600px; margin: 0 auto 2rem;">Nuestro equipo de ingenieros y arquitectos está listo para escuchar tus ideas y convertirlas en un proyecto ejecutivo.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="index.html#contacto" class="btn btn-primary btn-lg">Contactar a un Asesor</a>
+          <a href="index.html#cotizador" class="btn btn-outline btn-lg">Cotizar mi Proyecto</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <div class="footer-logo-box">
+            <img src="logo.png" alt="Constructora Melma del Valle" class="f-logo-img">
+          </div>
+          <div class="footer-logo-text">
+            <span class="f-brand">MELMA DEL VALLE</span>
+            <span class="f-sub">CONSTRUCTORA S.A. DE C.V.</span>
+          </div>
+        </div>
+        <p class="footer-text">
+          Soluciones de alta calidad en construcción civil, obras públicas, remodelaciones corporativas y residenciales, acabados finos y proyectos ejecutivos en México.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Nuestros Rubros</h4>
+        <ul class="footer-links">
+          <li><a href="rubros/construccion.html">Construcción Residencial</a></li>
+          <li><a href="rubros/construccion.html">Construcción Comercial</a></li>
+          <li><a href="rubros/construccion.html">Obra Pública</a></li>
+          <li><a href="rubros/remodelacion.html">Remodelación Interiores y Exteriores</a></li>
+          <li><a href="rubros/acabados.html">Acabados (Carpintería, Pisos, Cancelería)</a></li>
+          <li><a href="rubros/proyectos.html">Planos y Renders Arquitectónicos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navegación Rápida</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Quiénes Somos</a></li>
+          <li><a href="index.html#rubros">Catálogo de Rubros</a></li>
+          <li><a href="index.html#proceso">Metodología</a></li>
+          <li><a href="index.html#cotizador">Cotizador Rápido</a></li>
+          <li><a href="index.html#contacto">Contacto Directo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Ubicación y Atención</h4>
+        <p class="footer-contact-item">
+          <img src="icons/ubicacion.svg" alt="Ubicación" class="inline-icon"> AÑIL 571, INTERIOR 508 OFICINA 3, COL. GRANJAS MEXICO, IZTACALCO, CIUDAD DE MEXICO, C.P. 08400.
+        </p>
+        <p class="footer-contact-item">
+          <img src="icons/telefono.svg" alt="Teléfono" class="inline-icon"> <a href="tel:+525545858072">55 4585 8072</a>
+        </p>
+        <p class="footer-contact-item">
+          <img src="icons/correo.svg" alt="Correo" class="inline-icon"> <a href="mailto:contacto@melmadelvalle.com">contacto@melmadelvalle.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 CONSTRUCTORA MELMA DEL VALLE, S.A. DE C.V. Todos los derechos reservados.</p>
+        <div class="footer-legal-links">
+          <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+          <span>•</span>
+          <a href="terminos-servicio.html">Términos de Servicio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/525545858072?text=Hola%20Constructora%20Melma%20del%20Valle,%20quisiera%20cotizar%20un%20proyecto" 
+     class="whatsapp-floating-btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 2C8.28 2 2 8.28 2 16c0 2.56.68 4.96 1.88 7.04L2 30l7.2-1.84C11.24 29.32 13.56 30 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm6.96 19.8c-.3.84-1.74 1.54-2.4 1.62-.64.08-1.44.12-4.58-1.18-3.98-1.64-6.52-5.68-6.72-5.94-.2-.26-1.6-2.14-1.6-4.08s1.02-2.9 1.38-3.3c.36-.4.78-.5 1.04-.5.26 0 .52 0 .74.02.24.02.56-.08.88.68.32.76 1.08 2.64 1.18 2.84.1.2.16.44.02.72-.14.28-.22.44-.42.68-.2.24-.44.54-.62.72-.22.22-.44.46-.2.88.24.42 1.08 1.78 2.32 2.88 1.6 1.42 2.94 1.86 3.36 2.06.42.2.68.18.92-.1.26-.3.98-1.14 1.24-1.54.26-.4.52-.34.88-.2.36.14 2.28 1.08 2.68 1.28.4.2.66.3.76.46.1.16.1.94-.2 1.78z"/>
+    </svg>
+    <span class="floating-tooltip">¿Deseas cotizar? Escríbenos</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

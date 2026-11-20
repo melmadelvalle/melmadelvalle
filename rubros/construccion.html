@@ -12,7 +12,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Reutilizamos los estilos globales -->
   <link rel="stylesheet" href="../styles.css">
@@ -23,96 +23,40 @@
       background: linear-gradient(135deg, rgba(16, 20, 46, 0.95) 0%, rgba(69, 76, 142, 0.9) 100%),
                   url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
       color: #ffffff;
-      padding: 6rem 0 4rem;
+      padding: 4rem 0 4rem;
       text-align: center;
     }
-    .inner-hero .section-title {
-      color: #ffffff;
-      font-size: clamp(2rem, 4vw, 3rem);
-    }
-    .inner-hero p {
-      color: rgba(255, 255, 255, 0.85);
-      max-width: 700px;
-      margin: 0 auto;
-    }
+    .inner-hero .section-title { color: #ffffff; font-size: clamp(2rem, 4vw, 3rem); }
+    .inner-hero p { color: rgba(255, 255, 255, 0.85); max-width: 700px; margin: 0 auto; }
     
-    .subrubro-block {
-      padding: 4rem 0;
-      border-bottom: 1px solid var(--color-border);
-    }
-    .subrubro-block:nth-child(even) {
-      background-color: var(--color-bg-light);
-    }
-    .subrubro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-    .subrubro-image {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      height: 400px;
-    }
-    .subrubro-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .subrubro-content h2 {
-      font-size: 2rem;
-      color: var(--color-primary-dark);
-      margin-bottom: 1.5rem;
-    }
-    .subrubro-content p {
-      color: var(--color-text-muted);
-      font-size: 1.05rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.7;
-    }
-    .subrubro-features {
-      list-style: none;
-      margin-bottom: 2rem;
-    }
-    .subrubro-features li {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
-      font-weight: 600;
-      color: var(--color-primary);
-    }
-    .subrubro-features li::before {
-      content: '✓';
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 20px;
-      height: 20px;
-      background-color: var(--color-accent-soft);
-      color: var(--color-accent);
-      border-radius: 50%;
-      font-size: 0.8rem;
+    .subrubro-block { padding: 4rem 0; border-bottom: 1px solid var(--color-border); }
+    .subrubro-block:nth-child(even) { background-color: var(--color-bg-light); }
+    .subrubro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .subrubro-image { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); height: 400px; }
+    .subrubro-image img { width: 100%; height: 100%; object-fit: cover; }
+    .subrubro-content h2 { font-size: 2rem; color: var(--color-primary-dark); margin-bottom: 1.5rem; }
+    .subrubro-content p { color: var(--color-text-muted); font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.7; }
+    .subrubro-features { list-style: none; margin-bottom: 2rem; }
+    .subrubro-features li { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-weight: 600; color: var(--color-primary); }
+    .subrubro-features li::before { content: '✓'; display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; background-color: var(--color-accent-soft); color: var(--color-accent); border-radius: 50%; font-size: 0.8rem; flex-shrink: 0; }
+
+    .cta-banner {
+      background: linear-gradient(135deg, var(--color-primary-deep) 0%, var(--color-primary) 100%);
+      padding: 5rem 0;
+      color: #ffffff;
+      text-align: center;
+      border-top: 4px solid var(--color-accent);
     }
 
     @media (max-width: 992px) {
-      .subrubro-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      .subrubro-image {
-        height: 300px;
-      }
-      .subrubro-block:nth-child(even) .subrubro-grid {
-        direction: ltr; /* Resetea el orden en móvil */
-      }
+      .subrubro-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .subrubro-image { height: 300px; }
+      .subrubro-block:nth-child(even) .subrubro-grid { direction: ltr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR (Ajustado para ruta relativa) -->
   <header class="navbar scrolled" id="navbar">
     <div class="container nav-container">
       <a href="../index.html" class="logo">
@@ -121,7 +65,7 @@
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-links">
           <li><a href="../index.html" class="nav-link">Inicio</a></li>
-          <li><a href="../index.html#nosotros" class="nav-link">Quiénes Somos</a></li>
+          <li><a href="../nosotros.html" class="nav-link">Quiénes Somos</a></li>
           <li><a href="../index.html#rubros" class="nav-link active">Rubros</a></li>
           <li><a href="../index.html#proceso" class="nav-link">Metodología</a></li>
           <li><a href="../index.html#cotizador" class="nav-link">Cotizador</a></li>
@@ -130,21 +74,23 @@
       </nav>
       <div class="nav-actions">
         <a href="../index.html#cotizador" class="btn btn-primary nav-cta">Cotizar Proyecto</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- HERO INTERIOR -->
     <section class="inner-hero">
       <div class="container">
-        <span class="section-tag light" style="margin-bottom: 1rem;">Especialidad 01</span>
         <h1 class="section-title">Construcción Integral</h1>
         <p>Desarrollamos proyectos de edificación desde la cimentación hasta la entrega final, garantizando solidez estructural y cumplimiento normativo.</p>
       </div>
     </section>
 
-    <!-- SUBRUBRO: RESIDENCIAL -->
     <section class="subrubro-block" id="residencial">
       <div class="container subrubro-grid">
         <div class="subrubro-content">
@@ -164,10 +110,8 @@
       </div>
     </section>
 
-    <!-- SUBRUBRO: COMERCIAL -->
     <section class="subrubro-block" id="comercial">
       <div class="container subrubro-grid">
-        <!-- En pantallas grandes, invertimos el orden visual para que la imagen quede a la izquierda -->
         <div class="subrubro-image">
           <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Edificios comerciales y corporativos">
         </div>
@@ -185,7 +129,6 @@
       </div>
     </section>
 
-    <!-- SUBRUBRO: OBRA PÚBLICA -->
     <section class="subrubro-block" id="obra-publica">
       <div class="container subrubro-grid">
         <div class="subrubro-content">
@@ -200,22 +143,20 @@
           <a href="../index.html#cotizador" class="btn btn-primary">Cotizar Obra Pública</a>
         </div>
         <div class="subrubro-image">
-          <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f6?auto=format&fit=crop&w=800&q=80" alt="Obra pública e infraestructura civil">
+          <img src="https://melmadelvalle.com/wp-content/uploads/2026/01/haz-una-imagen-de-una-casa-estilo-moderna-desde-una.png" alt="Obra pública e infraestructura civil">
         </div>
       </div>
     </section>
 
-    <!-- CTA FINAL -->
-    <section class="section cotizador-section" style="padding: 4rem 0;">
-      <div class="container text-center">
-        <h2 class="section-title text-white">¿Listo para iniciar tu proyecto de construcción?</h2>
+    <section class="cta-banner">
+      <div class="container">
+        <h2 class="section-title text-white" style="margin-bottom: 1rem;">¿Listo para iniciar tu proyecto de construcción?</h2>
         <p class="text-white-80" style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Solicita una cotización formal y asesoría técnica. Nuestro equipo está listo para revisar tu terreno y planos.</p>
         <a href="../index.html#cotizador" class="btn btn-primary btn-lg">Ir al Cotizador en Línea</a>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER SIMPLIFICADO -->
   <footer class="footer">
     <div class="container footer-bottom-flex">
       <p>&copy; 2026 CONSTRUCTORA MELMA DEL VALLE, S.A. DE C.V.</p>
@@ -225,5 +166,6 @@
     </div>
   </footer>
 
+  <script src="../script.js"></script>
 </body>
 </html>
